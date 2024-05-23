@@ -1,0 +1,700 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #F8F8F8;
+}
+
+#main {
+    background-color: #F8F8F8;
+    height: 100%;
+    width: 100%;
+    /* background-color: beige; */
+    position: relative;
+    padding-top: 0.1px;
+    /*css bug*/
+}
+
+#nav {
+    height: 6vw;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 35px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav h3 {
+    display: none;
+}
+
+#nav h1 {
+    font-family: "monument";
+    font-weight: bolder;
+    /* background-color: blue; */
+    height: 100%;
+    width: 20%;
+    font-size: 2.5vw;
+    letter-spacing: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#nav h1::before {
+    content: "model management";
+    font-family: gilroy;
+    font-weight: 500;
+    font-size: 12px;
+    position: absolute;
+    bottom: 15%;
+    right: 19%;
+    letter-spacing: .05px;
+}
+
+#nav h1::after {
+    content: "©";
+    font-family: gilroy;
+    font-weight: 500;
+    font-size: 17px;
+    position: absolute;
+    top: 25%;
+    right: 8%;
+
+}
+
+#nav h2 {
+    font-family: "roboto";
+    font-weight: 600;
+    /* background-color: blue; */
+    height: 100%;
+    width: 20%;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid #000;
+    padding: 3vw;
+}
+
+#nav h2:nth-last-child(2) {
+    width: 30%;
+}
+
+#nav h2:nth-last-child(1) {
+    width: 10%;
+    border-right: none;
+    /* background-color: red; */
+}
+
+#center {
+    height: 90%;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    /*mandatory to give position relative*/
+    padding: 3vw 4vw;
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+    /* background-color: blue; */
+    position: relative;
+    /*mandatory to give position relative*/
+}
+
+#content video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#overlay {
+    height: 52%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    /* background-color: red; */
+    padding: 2vw;
+    color: #fff;
+}
+
+#over1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+}
+
+#over1 h1 {
+    font-family: "monument";
+    letter-spacing: 2px;
+    font-size: 3.2vw;
+}
+
+#over1 h2 {
+    font-size: 1vw;
+    padding: 2vw 2.2vw;
+    /* background-color: blue; */
+    border-radius: 50%;
+    border: 2px solid #fff;
+
+}
+
+#over2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #fff;
+    padding: 2vw 0;
+    padding-right: 1vw;
+}
+
+#over2 h4 {
+    font-size: 1.4vw;
+    font-family: "roboto";
+    font-weight: 400;
+
+}
+
+#over2 img {
+    height: 3vw;
+}
+
+
+#scroll {
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    /* background-color: blue; */
+    display: inline-block;
+    padding: 2vw;
+    animation-duration: 8s;
+    animation-name: anime;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroll img {
+    height: 80%;
+    border-radius: 50%;
+    width: 15%;
+    margin: 1vw;
+    object-fit: cover;
+    object-position: 30% 30%;
+}
+
+@keyframes anime {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#alphabet {
+    height: 12vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6vw;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+}
+
+#alphabet h5 {
+    font-weight: 400;
+    font-size: 2vw;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "roboto";
+    border-bottom: 2px solid #000;
+    margin-right: 2vw;
+}
+
+#alphabet h6 {
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: "roboto";
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 0.6vw 0.8vw;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all ease-in 0.2s;
+    /* background-color: yellow; */
+}
+
+#alphabet h6:hover {
+    border: 1px solid #000;
+}
+
+#page2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 5vw;
+
+}
+
+#page2-part1 {
+    height: 100%;
+    width: 60%;
+    background-image: url(https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    margin-right: 5vw;
+}
+
+#page2-part2 {
+    height: 100%;
+    width: 40%;
+}
+
+#page2-part2 img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 27%;
+    margin-bottom: 2vw;
+}
+
+#page2-part3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page2-part3-text1 p {
+    font-family: "Roboto";
+    font-size: 1.8vw;
+    font-weight: 600;
+
+}
+
+#page2-part3-text2 p {
+    font-family: "Roboto";
+    font-size: 1vw;
+    font-weight: 00;
+    line-height: 1.3vw;
+}
+
+#page3 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5vw 5vw;
+    padding-bottom: 2vw;
+
+}
+
+#page3-part1 {
+    width: 40%;
+    height: 100%;
+    /* background-color: red; */
+
+}
+
+#page3-part1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#page3-part1 h1 {
+    font-family: "monument";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 3vw;
+}
+
+#page3-part1 #circular i {
+    font-size: 8vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+#page3-part1 p {
+    font-size: 1.5vw;
+    font-family: "roboto";
+    font-weight: 600;
+
+}
+
+#page3-part2 {
+    width: 60%;
+    height: 100%;
+    /* background-color: blue; */
+    margin-left: 2vw;
+}
+
+#page3-part2 img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+#page4 {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(182, 182, 162); */
+    padding: 5vw;
+}
+
+#page4 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page4 h1 {
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: .4vw .7vw;
+    font-size: 1.8vw;
+    font-family: "roboto";
+}
+
+#page5 {
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding: 5vw 4vw;
+}
+
+#page5>h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3vw;
+    font-family: "monument";
+    /* font-weight: 900; */
+    margin-bottom: 3vw;
+}
+
+.elem {
+    height: 15.5vh;
+    width: 100%;
+    /* background-color: red; */
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    position: relative;
+    /*rakhne se dikkat nahi degi*/
+    transition: all ease-in 0.5s;
+
+}
+
+.elem:nth-last-child(1) {
+    border-bottom: 2px solid black;
+}
+
+.elem img {
+    height: 100px;
+    width: 115px;
+    position: absolute;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+    left: 10%;
+    opacity: 0;
+    transition: all ease-in 0.5s;
+}
+
+.elem h4 {
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 6%;
+    font-family: "roboto";
+}
+
+.elem .elem-part2 {
+    /* background-color: red; */
+    width: 50%;
+}
+
+.elem .elem-part2 h1 {
+    font-size: 2.5vw;
+    font-family: "roboto";
+    font-weight: 500;
+}
+
+.elem .elem-part2 h5 {
+    text-transform: uppercase;
+    font-family: "roboto";
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+.elem:nth-of-type(2n) img {
+    left: 33%;
+}
+
+.elem:hover {
+    background-color: #eeeeee;
+}
+
+.elem:hover img {
+    opacity: 1;
+    left: 20%;
+}
+
+#page6 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#page6-part1 {
+    padding: 2vw;
+    height: 100%;
+    width: 50%;
+    /* background: red; */
+}
+
+#page6-part1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+#page6-part2 {
+    height: 100%;
+    width: 50%;
+    /* background: yellow; */
+    padding: 2vw;
+    padding-top: 3vw;
+}
+
+#page6-part2 #page6-texts {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#page6-part2 #page6-texts h1 {
+    font-family: "monument";
+    font-size: 3vw;
+}
+
+#page6-part2 #page6-texts h4 {
+    font-family: "roboto";
+    font-size: 1.7vw;
+    font-weight: 500;
+}
+
+#page6-part2 #page6-texts h6 {
+    font-family: "roboto";
+    font-size: 1vw;
+    font-weight: 400;
+}
+
+#page6-part2 #page6-imgs {
+    height: 55%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#page6-part2 #page6-imgs img {
+    height: 100%;
+    width: 50%;
+    object-position: center;
+    object-fit: cover;
+
+}
+
+#page6-part2 #page6-imgs img:nth-of-type(1) {
+    margin-right: 1vw;
+    padding: 3vw 0 0 0;
+}
+
+#page6-part2 #page6-imgs img:nth-of-type(2) {
+    margin-left: 1vw;
+    padding: 3vw 0 0 0;
+}
+
+#page7 {
+    height: 100%;
+    width: 100%;
+}
+
+#page7 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding: 3vw 4vw;
+
+}
+
+#page7 h6 {
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 0.6vw 0.7vw;
+    display: inline-block;
+}
+
+#page8 {
+    height: 100%;
+    width: 100%;
+
+}
+
+#marque {
+    /* height: 15vh; */
+    width: 100%;
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: .8vw;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#marque h1 {
+    display: inline-block;
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    -webkit-text-stroke: 1px black;
+    color: transparent;
+    font-family: monument;
+    /* background-color: blue; */
+    margin-right: 15px;
+    letter-spacing: 2px;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 15px));
+    }
+}
+
+#footer {
+    height: 100%;
+    width: 100%;
+
+}
+
+@media (max-width: 500px) {
+
+    #nav {
+        height: 7vh;
+        margin-top: 15px;
+        padding: 0 5vw;
+    }
+
+    #nav h1 {
+        font-family: "monument";
+        font-weight: bolder;
+        /* background-color: blue; */
+        height: 100%;
+        width: 40%;
+        font-size: 20px;
+        letter-spacing: -2px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    nav h3 {
+        display: block;
+    }
+
+    #nav h1::before {
+        display: none;
+    }
+
+    #nav h1::after {
+        display: none;
+    }
+
+    #nav h2 {
+        font-family: "roboto";
+        font-weight: 600;
+        /* background-color: blue; */
+        height: 100%;
+        width: 20%;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 2px solid #000;
+        padding: 3vw;
+        display: none;
+    }
+
+    #nav h2:nth-last-child(2) {
+        width: 30%;
+    }
+
+    #nav h2:nth-last-child(1) {
+        width: 10%;
+        border-right: none;
+        /* background-color: red; */
+
+    }
+
+}
